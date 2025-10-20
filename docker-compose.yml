@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./water-meter-dashboard  # Path to the frontend directory
+    ports:
+      - "6789:6789"  # Map the container's port 80 to the host's port 80
+    depends_on:
+      - backend  # Ensure backend is available before frontend starts
+    networks:
+      - webnet
+
+  backend:
+    build:
+      context: ./api  # Path to the backend directory
+    ports:
+      - "5000:5000"  # Map the container's port 5000 to the host's port 5000
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge

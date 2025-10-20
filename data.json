@@ -1,0 +1,416 @@
+[
+    {
+        "METER ID": "WMA010",
+        "METER NAME": "Brine (RO reject) BW-B-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:56:31.000Z",
+        "Data METER": 339693,
+        "Record ID": "70500073",
+        "MAX CAP": 360
+    },
+    {
+        "METER ID": "WMA009",
+        "METER NAME": "Brine (RO reject) BW-A-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:56:19.000Z",
+        "Data METER": 430521,
+        "Record ID": "70500073",
+        "MAX CAP": 360
+    },
+    {
+        "METER ID": "WMA002",
+        "METER NAME": "RW to BW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:54:29.000Z",
+        "Data METER": 205583,
+        "Record ID": "70500073",
+        "MAX CAP": 700
+    },
+    {
+        "METER ID": "WMA001",
+        "METER NAME": "RW to RW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:54:22.000Z",
+        "Data METER": 427190,
+        "Record ID": "70500073",
+        "MAX CAP": 1550
+    },
+    {
+        "METER ID": "WMA014",
+        "METER NAME": "Back wash rinse-A NO.A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:53:25.000Z",
+        "Data METER": 306605,
+        "Record ID": "70500073",
+        "MAX CAP": 0
+    },
+    {
+        "METER ID": "WMA015",
+        "METER NAME": "BW to Neu.-A (m3)",
+        "PROCESS": "WWT-A",
+        "DATE TIME": "2025-08-31T22:52:34.000Z",
+        "Data METER": 914231,
+        "Record ID": "70500073",
+        "MAX CAP": 1200
+    },
+    {
+        "METER ID": "WMA013",
+        "METER NAME": "BW-A to Factory-C1 (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:51:55.000Z",
+        "Data METER": 701042,
+        "Record ID": "70500073",
+        "MAX CAP": 350
+    },
+    {
+        "METER ID": "WMA012",
+        "METER NAME": "BW to Factory-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:51:40.000Z",
+        "Data METER": 179368,
+        "Record ID": "70500073",
+        "MAX CAP": 150
+    },
+    {
+        "METER ID": "WMA008",
+        "METER NAME": "DI (Mixed bed-C)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:49:27.000Z",
+        "Data METER": 38230,
+        "Record ID": "70500073",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA007",
+        "METER NAME": "DI (Mixed bed-B)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:48:40.000Z",
+        "Data METER": 40875,
+        "Record ID": "70500073",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA006",
+        "METER NAME": "DI (Mixed bed-A)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:48:24.000Z",
+        "Data METER": 41204,
+        "Record ID": "70500073",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA005",
+        "METER NAME": "RO-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:47:41.000Z",
+        "Data METER": 1036733,
+        "Record ID": "70500073",
+        "MAX CAP": 924
+    },
+    {
+        "METER ID": "WMA004",
+        "METER NAME": "FW-B-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:47:12.000Z",
+        "Data METER": 87621,
+        "Record ID": "70500073",
+        "MAX CAP": 920
+    },
+    {
+        "METER ID": "WMA003",
+        "METER NAME": "FW-A-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:46:52.000Z",
+        "Data METER": 280898,
+        "Record ID": "70500073",
+        "MAX CAP": 920
+    },
+    {
+        "METER ID": "WMA002",
+        "METER NAME": "RW to BW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-31T22:46:37.000Z",
+        "Data METER": 934269,
+        "Record ID": "70500073",
+        "MAX CAP": 700
+    },
+    {
+        "METER ID": "PMWA01",
+        "METER NAME": "WT-A WATT HOUR METER (kWh)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:56:08.000Z",
+        "Data METER": 2231638,
+        "Record ID": "70008991",
+        "MAX CAP": 1420
+    },
+    {
+        "METER ID": "WMA014",
+        "METER NAME": "Back wash rinse-A NO.A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:55:52.000Z",
+        "Data METER": 306605,
+        "Record ID": "70008991",
+        "MAX CAP": 0
+    },
+    {
+        "METER ID": "WMA015",
+        "METER NAME": "BW to Neu.-A (m3)",
+        "PROCESS": "WWT-A",
+        "DATE TIME": "2025-08-30T08:55:39.000Z",
+        "Data METER": 913394,
+        "Record ID": "70008991",
+        "MAX CAP": 1200
+    },
+    {
+        "METER ID": "WMA013",
+        "METER NAME": "BW-A to Factory-C1 (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:55:27.000Z",
+        "Data METER": 700640,
+        "Record ID": "70008991",
+        "MAX CAP": 350
+    },
+    {
+        "METER ID": "WMA012",
+        "METER NAME": "BW to Factory-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:55:19.000Z",
+        "Data METER": 179369,
+        "Record ID": "70008991",
+        "MAX CAP": 150
+    },
+    {
+        "METER ID": "WMA011",
+        "METER NAME": "FW to Factory-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:55:09.000Z",
+        "Data METER": 122317,
+        "Record ID": "70008991",
+        "MAX CAP": 10
+    },
+    {
+        "METER ID": "WMA010",
+        "METER NAME": "Brine (RO reject) BW-B-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:54:56.000Z",
+        "Data METER": 339272,
+        "Record ID": "70008991",
+        "MAX CAP": 360
+    },
+    {
+        "METER ID": "WMA009",
+        "METER NAME": "Brine (RO reject) BW-A-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:54:47.000Z",
+        "Data METER": 429992,
+        "Record ID": "70008991",
+        "MAX CAP": 360
+    },
+    {
+        "METER ID": "WMA008",
+        "METER NAME": "DI (Mixed bed-C)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:54:35.000Z",
+        "Data METER": 38230,
+        "Record ID": "70008991",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA007",
+        "METER NAME": "DI (Mixed bed-B)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:54:21.000Z",
+        "Data METER": 40807,
+        "Record ID": "70008991",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA006",
+        "METER NAME": "DI (Mixed bed-A)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:54:11.000Z",
+        "Data METER": 41161,
+        "Record ID": "70008991",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA005",
+        "METER NAME": "RO-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:54:04.000Z",
+        "Data METER": 1035980,
+        "Record ID": "70008991",
+        "MAX CAP": 924
+    },
+    {
+        "METER ID": "WMA004",
+        "METER NAME": "FW-B-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:53:53.000Z",
+        "Data METER": 86692,
+        "Record ID": "70008991",
+        "MAX CAP": 920
+    },
+    {
+        "METER ID": "WMA003",
+        "METER NAME": "FW-A-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:53:45.000Z",
+        "Data METER": 279772,
+        "Record ID": "70008991",
+        "MAX CAP": 920
+    },
+    {
+        "METER ID": "WMA002",
+        "METER NAME": "RW to BW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:53:23.000Z",
+        "Data METER": 205242,
+        "Record ID": "70008991",
+        "MAX CAP": 700
+    },
+    {
+        "METER ID": "WMA001",
+        "METER NAME": "RW to RW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-30T08:53:16.000Z",
+        "Data METER": 424977,
+        "Record ID": "70008991",
+        "MAX CAP": 1550
+    },
+    {
+        "METER ID": "WMA002",
+        "METER NAME": "RW to BW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:10:24.000Z",
+        "Data METER": 205242,
+        "Record ID": "70130746",
+        "MAX CAP": 700
+    },
+    {
+        "METER ID": "WMA001",
+        "METER NAME": "RW to RW-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:09:25.000Z",
+        "Data METER": 423478,
+        "Record ID": "70130746",
+        "MAX CAP": 1550
+    },
+    {
+        "METER ID": "WMA015",
+        "METER NAME": "BW to Neu.-A (m3)",
+        "PROCESS": "WWT-A",
+        "DATE TIME": "2025-08-29T03:08:46.000Z",
+        "Data METER": 912909,
+        "Record ID": "70130746",
+        "MAX CAP": 1200
+    },
+    {
+        "METER ID": "WMA013",
+        "METER NAME": "BW-A to Factory-C1 (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:08:26.000Z",
+        "Data METER": 700350,
+        "Record ID": "70130746",
+        "MAX CAP": 350
+    },
+    {
+        "METER ID": "WMA012",
+        "METER NAME": "BW to Factory-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:07:40.000Z",
+        "Data METER": 179368,
+        "Record ID": "70130746",
+        "MAX CAP": 150
+    },
+    {
+        "METER ID": "WMA011",
+        "METER NAME": "FW to Factory-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:06:57.000Z",
+        "Data METER": 122317,
+        "Record ID": "70130746",
+        "MAX CAP": 10
+    },
+    {
+        "METER ID": "WMA014",
+        "METER NAME": "Back wash rinse-A NO.A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:06:08.000Z",
+        "Data METER": 306605,
+        "Record ID": "70130746",
+        "MAX CAP": 0
+    },
+    {
+        "METER ID": "WMA008",
+        "METER NAME": "DI (Mixed bed-C)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:05:31.000Z",
+        "Data METER": 38230,
+        "Record ID": "70130746",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA007",
+        "METER NAME": "DI (Mixed bed-B)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:05:09.000Z",
+        "Data METER": 40776,
+        "Record ID": "70130746",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA006",
+        "METER NAME": "DI (Mixed bed-A)-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:04:46.000Z",
+        "Data METER": 41109,
+        "Record ID": "70130746",
+        "MAX CAP": 48
+    },
+    {
+        "METER ID": "WMA010",
+        "METER NAME": "Brine (RO reject) BW-B-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:01:55.000Z",
+        "Data METER": 339011,
+        "Record ID": "70130746",
+        "MAX CAP": 360
+    },
+    {
+        "METER ID": "WMA009",
+        "METER NAME": "Brine (RO reject) BW-A-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T03:00:33.000Z",
+        "Data METER": 429560,
+        "Record ID": "70130746",
+        "MAX CAP": 360
+    },
+    {
+        "METER ID": "WMA005",
+        "METER NAME": "RO-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T02:58:12.000Z",
+        "Data METER": 1034875,
+        "Record ID": "70130746",
+        "MAX CAP": 924
+    },
+    {
+        "METER ID": "WMA004",
+        "METER NAME": "FW-B-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T02:57:42.000Z",
+        "Data METER": 86066,
+        "Record ID": "70130746",
+        "MAX CAP": 920
+    },
+    {
+        "METER ID": "WMA003",
+        "METER NAME": "FW-A-A (m3)",
+        "PROCESS": "WT-A",
+        "DATE TIME": "2025-08-29T02:57:10.000Z",
+        "Data METER": 279046,
+        "Record ID": "70130746",
+        "MAX CAP": 920
+    }
+]
