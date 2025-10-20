@@ -1,0 +1,249 @@
+/* AlarmListPage.module.css - FINAL FIX: แก้ไข Alignment ของ Header เท่านั้น */
+
+/* ==================================================== */
+/* 1. จัดการคอนเทนเนอร์หุ้ม (Container) */
+/* ==================================================== */
+
+.tableContainer {
+    /* Layout */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางตาราง */
+
+    /* Spacing */
+    padding: 20px 0;
+}
+
+.customTableWrapper {
+    /* Visuals & Box Model */
+    background-color: #ffffff; /* พื้นหลังสีขาว */
+    border-radius: 12px; /* ขอบมน */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูมีมิติ */
+
+    /* Layout & Spacing */
+    padding: 20px; /* เพิ่ม padding ภายใน wrapper */
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.customTableTitle {
+    /* Typography */
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+
+    /* Alignment & Spacing */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ==================================================== */
+/* 2. STYLES สำหรับตาราง GRID ใหม่ (AlarmTable) */
+/* ==================================================== */
+
+.customDataTable {
+    /* Layout & Box Model */
+    display: grid;
+    margin: 0 auto;
+    overflow: hidden;
+
+    /* Visuals */
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.customTableHeader,
+.customTableBody,
+.customTableRow {
+    /* Layout */
+    display: contents;
+}
+
+/* Base Styles สำหรับ Header Cell และ Cell Data */
+.customHeaderCell,
+.customTableCell {
+    /* Typography & Spacing */
+    font-size: 0.9rem;
+    padding: 1rem;
+    text-align: center; /* ค่าเริ่มต้นคือจัดกลาง */
+
+    /* Borders */
+    border-bottom: 1px solid #e5e7eb;
+    border-left: 1px solid #c5d0e2;
+}
+
+/* Cell Data ต้องใช้ Flexbox จัดแนวตั้ง (คงเดิม) */
+.customTableCell {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🚨 FIX: Header Cell (Final Fix สำหรับ 2 บรรทัด และ Center) 🚨 */
+.customHeaderCell {
+    /* Typography & Style */
+    background: #e0e7f2;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    /* Layout & Alignment */
+    display: block;
+    text-align: center; /* 🚨 หัวตารางจัดกลางเสมอ 🚨 */
+    height: auto;
+    line-height: 1.1;
+    white-space: normal;
+    word-break: break-word;
+
+    /* Borders */
+    border-bottom: 2px solid #c5d0e2;
+}
+
+/* ลบเส้นที่ไม่จำเป็นและเพิ่มเส้นขวา */
+.customHeaderCell:first-child,
+.customTableCell:first-child { border-left: none; }
+.customHeaderCell:last-child,
+.customTableCell:last-child { border-right: 1px solid #c5d0e2; }
+
+.customTableRow:nth-child(even) .customTableCell { background-color: #f9fafb; }
+
+/* ==================================================== */
+/* ✨ 3. การจัดเรียงข้อมูล: FIX DATA CELLS (คงค่าเดิมทุกประการ) ✨ */
+/* ==================================================== */
+
+/* 🚨 METER ID (คอลัมน์ 1) - จัดอยู่ตรงกลาง */
+.customTableCell:nth-child(1) {
+    text-align: center;
+    justify-content: center;
+}
+
+/* METER NAME (คอลัมน์ 2) - ชิดซ้าย (ค่าเดิม) */
+.customTableCell:nth-child(2) {
+    text-align: left;
+    justify-content: center; /* **ค่าเดิม** จากโค้ดต้นฉบับ แม้ว่า text-align จะเป็น left ก็ตาม */
+    /* คำสั่ง word-break อื่นๆ ควรอยู่ในบล็อกนี้แล้ว */
+}
+
+/* FACTORY (คอลัมน์ 3) - จัดอยู่ตรงกลาง (ค่าเดิม) */
+.customTableCell:nth-child(3) {
+    text-align: center;
+    justify-content: flex-start;; /* **ค่าเดิม** จากโค้ดต้นฉบับ แม้ว่า text-align จะเป็น center ก็ตาม */
+}
+
+/* 🚨 ลบโค้ดจัดชิดขวาของคอลัมน์ 4-7 ออกทั้งหมด 🚨 เพื่อให้กลับไปตาม JS/CSS เดิม */
+
+/* ==================================================== */
+/* 4. ส่วน CSS ที่ใช้งานทั่วไปของ AlarmListPage (คงเดิม) */
+/* ==================================================== */
+
+.backButton {
+    /* Style & Visuals */
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+
+    /* Spacing & Typography */
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.backButton:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.loadingState, .errorState, .noDataState {
+    /* Spacing & Box Model */
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+
+    /* Typography & Alignment */
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.loadingState {
+    background-color: #f0f9ff;
+    color: #3b82f6;
+}
+
+.errorState {
+    background-color: #fee2e2;
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.noDataState {
+    background-color: #d1fae5;
+    color: #059669;
+    font-weight: bold;
+}
+
+/* --- Filter Bar Styles --- */
+.filterBar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    /* 🚨 1. ปรับลด Padding แนวตั้ง */
+    /* เดิม 15px 25px จะมากเกินไปสำหรับส่วนบน ลองใช้ 12px */
+    padding: 15px 25px; 
+    
+    background-color: var(--card-bg, #ffffff); 
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-light, 0 1px 3px rgba(0, 0, 0, 0.1));  
+    flex-wrap: wrap;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    /* 🚨 2. เพิ่ม Margin-top เพื่อชดเชยความสูงของ Label */
+    /* ค่า 4px ถึง 5px จะช่วยดันองค์ประกอบลงมาเล็กน้อย ทำให้ช่องว่างด้านบนดูเต็มขึ้น */
+    margin-top: 4px; 
+}
+
+.inputLabel {
+    font-size: 0.9rem;
+    color: var(--font-color-dark, #333);
+    font-weight: 500;
+}
+
+.searchInput,
+.selectInput {
+    /* Padding 8px 12px ตรงนี้ใช้ได้ดี */
+    padding: 8px 12px;
+    border: 1px solid var(--border-color, #d1d5db);
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 180px;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus,
+.selectInput:focus {
+    outline: none;
+    border-color: var(--primary-color, #3b82f6);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* เพิ่มท้ายไฟล์ AlarmListPage.module.css */
+
+.clickableRow {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.clickableRow:hover {
+    background-color: #f0f7ff; /* สีฟ้าอ่อนๆ เวลานำเมาส์ไปชี้ */
+}

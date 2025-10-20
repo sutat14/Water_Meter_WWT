@@ -1,0 +1,172 @@
+/* ไฟล์นี้จะรวมสไตล์ที่จำเป็นทั้งหมดไว้ที่เดียว */
+.container {
+    padding: 2rem;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5rem;
+}
+
+.cardContainer {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 768px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.formTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1f2937;
+    margin-top: 2.5rem;
+}
+
+/* --- ส่วนของ Search Bar --- */
+.searchInputGroup {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.searchInputGroup .formInput {
+    text-align: center;
+}
+
+/* --- ส่วนของฟอร์ม (ใช้ใน MeterFormUI.js) --- */
+.recordForm {
+    margin-top: 2rem;
+}
+
+.dataEditFormGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .dataEditFormGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel {
+    font-size: 0.875rem;
+    color: #4b5563;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+.formInput:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+    color: #6b7280;
+}
+
+/* --- ส่วนของปุ่ม --- */
+.buttonContainer {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.buttonContainer .actionButton {
+    width: 100%;
+}
+
+.actionButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.actionButton:active {
+    transform: translateY(1px);
+}
+
+.primaryButton {
+    color: #ffffff;
+    background-color: #22c55e;
+}
+
+.primaryButton:hover {
+    background-color: #16a34a;
+}
+
+.dangerButton {
+    color: #ffffff;
+    background-color: #ef4444;
+}
+
+.dangerButton:hover {
+    background-color: #dc2626;
+}
+
+.backButton {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.backButton:hover {
+    background-color: #d1d5db;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+/* --- ข้อความสถานะ --- */
+.loadingState,
+.errorMessage {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 0;
+    font-weight: 500;
+}
+
+.loadingState {
+    color: #3b82f6;
+}
+
+.errorMessage {
+    color: #ef4444;
+}

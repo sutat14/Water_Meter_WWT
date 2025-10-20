@@ -1,0 +1,164 @@
+/* Container หลักของหน้า */
+.container {
+    padding: 2rem;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Add this line to center the card vertically */
+    padding-top: 5rem;
+}
+
+/* Card Container */
+.cardContainer {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 768px;
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+    position: relative; /* Add position relative for button positioning */
+}
+
+/* ส่วนหัวข้อ */
+.formTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1f2937;
+    margin-top: 2.0rem; /* เพิ่มระยะห่างด้านบน */
+}
+
+/* กลุ่มปุ่มค้นหา */
+.searchInputGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Increased gap for better spacing */
+    margin-bottom: 2rem; /* Increased margin for better separation */
+}
+
+/* สไตล์ input ทั่วไป */
+.formInput {
+    flex: 1; /* Allows input to grow */
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+/* ปุ่มทั่วไป */
+.actionButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionButton:active {
+    transform: translateY(1px); /* Simple press effect */
+}
+
+.primaryButton {
+    color: #ffffff;
+    background-color: #22c55e;
+}
+
+.primaryButton:hover {
+    background-color: #16a34a;
+}
+
+.secondaryButton {
+    color: #6b7280;
+    background-color: #e5e7eb;
+}
+
+.secondaryButton:hover {
+    background-color: #d1d5db;
+}
+
+.backButton {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    margin-bottom: 0;
+}
+
+.saveButton {
+    width: 100%;
+    margin-top: 2rem; /* เพิ่มระยะห่างด้านบน */
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+/* Grid Layout สำหรับฟอร์มข้อมูล */
+.recordForm {
+    margin-top: 2rem;
+}
+
+.dataEditFormGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* กลุ่ม Input พร้อม Label */
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel {
+    font-size: 0.875rem;
+    color: #4b5563;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+/* ข้อความสถานะ */
+.loadingState,
+.errorMessage {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.loadingState {
+    color: #3b82f6;
+}
+
+.errorMessage {
+    color: #ef4444;
+}
+
+/* สำหรับเบราว์เซอร์ Firefox */
+.tableContainer {
+    /* ...โค้ดส่วนอื่นๆ ที่มีอยู่แล้ว... */
+    overflow-x: auto;
+    overflow-y: scroll; 
+    scrollbar-width: none;  
+}
+
+/* สำหรับ WebKit browsers (Chrome, Safari, Edge) */
+.tableContainer::-webkit-scrollbar {
+    display: none;
+}

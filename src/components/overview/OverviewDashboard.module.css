@@ -1,0 +1,330 @@
+/* ==========================================================================
+   Styles for OverviewDashboard Component
+   ========================================================================== */
+
+/* --- 1. Global Variables & Body --- */
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover-color: #2563eb;
+  --secondary-color: #6b7280;
+  --border-color: #d1d5db;
+  --bg-light-gray: #f9fafb;
+  --font-color-dark: #333;
+  --font-color-light: #6b7280;
+  --card-bg: #ffffff;
+  --main-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --button-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+body {
+    background-color: #eef2f6;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. Main Layout Containers --- */
+.dashboardContainer {
+    padding: 2rem;
+    max-width: 90rem;
+    margin: 2rem auto;
+    font-size: 0.875rem;
+}
+
+.chartContainer {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--main-shadow);
+    margin-bottom: 1.5rem;
+    height: 28rem;
+}
+
+.tableContainer {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--main-shadow);
+    overflow-x: auto;
+}
+
+/* --- 3. Header Section --- */
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--main-shadow);
+}
+
+.mainTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.headerControls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* --- 4. Filter & Controls Section --- */
+.filterSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem; /* Add margin to separate from chart */
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--main-shadow);
+}
+
+.filterLeft {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end; /* Align items to the bottom edge */
+}
+
+.filterRight {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Push alarm buttons to the far right */
+}
+
+.alarmCounters {
+    display: flex;
+    gap: 10px;
+}
+
+/* Input Styles */
+.datePickerContainer,
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--font-color-dark);
+    font-weight: 500;
+}
+
+.inputLabel i {
+    font-style: normal;
+    display: inline-block;
+}
+
+.dateInput,
+.searchInput {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--font-color-dark);
+    height: 40px; /* Standard height for inputs */
+    box-sizing: border-box;
+}
+
+.dateInput:focus,
+.searchInput:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+/* Button Styles */
+.factoryButton {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 550;
+    font-size: 0.875rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background-color: #e5e7eb;
+    color: #4b5563;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.factoryButton:hover {
+    background-color: #d1d5db;
+}
+
+.fetchButton {
+    height: 40px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+}
+
+.fetchButton:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.fetchButton i {
+    margin-right: 8px;
+}
+
+.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    box-shadow: var(--button-shadow);
+    font-weight: 700;
+    border-color: var(--primary-color);
+}
+
+
+/* --- 5. Table Styles --- */
+.tableTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--font-color-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 1rem 0.8rem;
+    border-bottom: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.table th {
+    background-color: var(--bg-light-gray);
+    color: var(--font-color-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table td:nth-child(2) { /* Meter Name column */
+    text-align: left;
+    font-weight: 500;
+    color: var(--font-color-dark);
+}
+
+.table tbody tr {
+    transition: background-color 150ms ease;
+}
+
+.table .table-row.actionable:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.table .no-data-cell {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: var(--font-color-light);
+    font-style: italic;
+}
+
+
+/* --- 6. Utility & State Styles --- */
+.loadingState,
+.noDataState {
+    text-align: center;
+    padding: 2.5rem 0;
+    color: var(--secondary-color);
+}
+
+.statusDot.normal {
+    background-color: #22c55e; /* Green */
+}
+
+.statusDot.exceeded {
+    background-color: #ef4444; /* Red */
+}
+
+.noData {
+  background-color: #ccc; 
+}
+
+/* ==========================================================================
+   STYLES FOR CUSTOM TABLE CELLS (Add this to the end of the file)
+   ========================================================================== */
+
+/* --- Container for Status Cell --- */
+.statusCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between dot and text */
+}
+
+/* --- The Status Dot itself --- */
+.statusDot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%; /* Makes it a circle */
+}
+
+/* --- Color for Normal state --- */
+.normal {
+  background-color: #22c55e; /* Green */
+}
+
+/* --- Color for Exceeded state --- */
+.exceeded {
+  background-color: #ef4444; /* Red */
+}

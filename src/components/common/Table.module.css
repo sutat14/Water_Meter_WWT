@@ -1,0 +1,153 @@
+/* common/Table.module.css */
+
+.tableWrapper {
+  overflow-x: auto; /* ยังคงจำเป็นเพื่อให้เลื่อนได้แนวนอนถ้าตารางกว้างมาก */
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+.tableTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.dataTable {
+  display: grid;
+  /* ปรับความกว้างของแต่ละคอลัมน์ */
+  grid-template-columns: 
+    minmax(100px, 0.8fr)    /* METER ID: เพิ่มความกว้างขั้นต่ำเล็กน้อย */
+    minmax(280px, 2fr)      /* METER NAME: เพิ่มความกว้างอย่างมีนัยสำคัญ */
+    minmax(90px, 0.7fr)     /* PROCESS: เพิ่มความกว้างเล็กน้อย */
+    minmax(160px, 1.2fr)    /* DATE TIME: เพิ่มความกว้างให้รองรับวันที่และเวลาได้ดีขึ้น */
+    minmax(120px, 1fr)      /* DATA METER: คงเดิมหรือเพิ่มเล็กน้อย */
+    minmax(140px, 1.2fr)    /* CONSUMPTION: เพิ่มความกว้าง */
+    minmax(100px, 0.8fr)    /* STATUS: อาจลดได้ถ้าไอคอนเล็ก */
+    minmax(120px, 1fr)      /* RECORD ID: เพิ่มความกว้างเล็กน้อย */
+    minmax(100px, 0.8fr);   /* MAX CAP: เพิ่มความกว้างเล็กน้อย */
+  
+  font-size: 0.875rem;
+  border-top: 1px solid #e5e7eb; 
+}
+
+/* ส่วนหัวของตาราง (Headers) */
+.tableHeader {
+  display: contents; 
+}
+
+.headerCell {
+  background: #e0e7f2;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-bottom: 1px solid #c5d0e2;
+  border-left: 1px solid #c5d0e2; 
+  display: flex; 
+  align-items: center; /* จัดกลางแนวตั้ง */
+  justify-content: center; /* จัดกลางแนวนอน */
+  word-break: break-word; 
+  white-space: normal; 
+  text-align: center; 
+}
+.headerCell:first-child {
+  border-left: none; 
+}
+
+/* ส่วนข้อมูลในแต่ละแถว */
+.tableBody {
+  display: contents; 
+}
+
+.tableRow {
+  display: contents; 
+}
+
+.tableCell {
+  padding: 1rem;
+  border-bottom: 1px solid #c5d0e2; 
+  border-left: 1px solid #c5d0e2;
+  display: flex; 
+  align-items: center; /* จัดกลางแนวตั้ง */
+  justify-content: center; /* จัดกลางแนวนอน */
+  word-break: break-word;
+  white-space: normal;
+  vertical-align: top; 
+  text-align: center; 
+}
+.tableCell:first-child {
+  border-left: none; 
+}
+
+/* จัดแนวข้อความเฉพาะสำหรับคอลัมน์ METER NAME และ Record ID */
+/* Record ID อาจเป็นชื่อคนหรือข้อมูลที่ยาวได้ ควรจัดชิดซ้ายเพื่อความสวยงาม */
+.leftAlign {
+  text-align: left;
+  justify-content: flex-start; 
+}
+
+.statusCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.statusDot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.normal {
+  background-color: #22c55e;
+}
+
+.exceeded {
+  background-color: #ef4444;
+}
+
+.noData {
+  background-color: #ccc; 
+}
+
+.tableRow:hover > .tableCell {
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+.noDataCell {
+  padding: 1rem;
+  color: #6b7280;
+  text-align: center;
+  grid-column: 1 / -1; 
+  border: 1px solid #e5e7eb;
+  border-top: none; 
+}
+
+/* กำหนดสีพื้นหลังให้กับแต่ละ Cell ในแถวที่เป็นคู่ */
+.tableRow:nth-of-type(even) .tableCell {
+  background-color: #f9fafb; /* สีเทาอ่อนมาก */
+}
+
+/* กำหนดสีพื้นหลังให้กับแต่ละ Cell ในแถวที่เป็นคี่ */
+.tableRow:nth-of-type(odd) .tableCell {
+  background-color: #ffffff; /* สีขาว */
+}
+
+/* เมื่อเมาส์ชี้บนแถว (Hover effect) */
+.tableRow:hover > .tableCell {
+  background-color: #e5e7eb; /* เปลี่ยนสีพื้นหลังเมื่อเมาส์ชี้ */  
+  cursor: pointer;
+}
+
+.exceededText {
+  color: #ef4444; /* A shade of red */
+  font-weight: bold; 
+}

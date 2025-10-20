@@ -1,0 +1,117 @@
+/* สำหรับส่วน login-page-container เท่านั้น */
+.loginPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding-top: 5rem;
+    box-sizing: border-box;
+    overflow: hidden; /* ซ่อนทั้ง horizontal และ vertical scrollbar ในหน้า login */
+}
+
+/* ไม่ใช้ overflow: hidden ใน html และ body */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto; /* เปิดให้เลื่อน scrollbar ในหน้าอื่นๆ */
+}
+
+
+.loginCardContainer {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    width: 100%;
+}
+
+.loginFormTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1f2937;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.loginInputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginInputLabel {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.loginFormInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.loginFormInput:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+.loginFormButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.loginFormButton {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.loginFormButtonPrimary {
+    color: #ffffff;
+    background-color: #3b82f6;
+}
+
+.loginFormButtonPrimary:hover {
+    background-color: #2563eb;
+}
+
+.loginFormButtonSecondary {
+    color: #4b5563;
+    background-color: #e5e7eb;
+}
+
+.loginFormButtonSecondary:hover {
+    background-color: #d1d5db;
+}
+
+.loginErrorMessage {
+    color: #ef4444;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: -1rem;
+}

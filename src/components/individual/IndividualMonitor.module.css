@@ -1,0 +1,364 @@
+/* IndividualMonitor.module.css - Reorganized */
+
+/* =================================================================
+// 1. GLOBAL STYLES & VARIABLES
+// ================================================================= */
+
+:root {
+    /* --- Color Palette --- */
+    --primary-color: #3b82f6; /* สีน้ำเงินหลัก */
+    --primary-hover-color: #2563eb;
+    --secondary-color: #6b7280; /* สีเทารอง */
+    --secondary-hover-color: #4b5563;
+    --border-color: #d1d5db; /* สีขอบ */
+    --bg-light-gray: #f9fafb; /* สีพื้นหลังอ่อน */
+    --font-color-dark: #333; /* สีตัวอักษรเข้ม */
+    --font-color-light: #6b7280; /* สีตัวอักษรอ่อน */
+    --card-bg: #ffffff; /* สีพื้นหลังของ card (chart, table) */
+    --dashboard-bg: #eef2f6; /* สีพื้นหลังของ dashboard */
+    
+    /* --- Shadows --- */
+    --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1); /* เงาอ่อน */
+    --box-shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* เงาปานกลาง */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ปรับ Font ให้ดูทันสมัยขึ้น */
+    background-color: var(--dashboard-bg); /* กำหนดสีพื้นหลัง body */
+}
+
+/* =================================================================
+// 2. MAIN LAYOUT & CONTAINER STYLES
+// ================================================================= */
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: column; /* จัดเรียงเนื้อหาทั้งหมดเป็นคอลัมน์ */
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    padding: 0px 20px 20px 20px; /* ลด Padding ด้านบนจาก 20px ให้เหลือ 0px */
+    background-color: var(--dashboard-bg);
+}
+
+.content {
+    flex-grow: 1; /* เนื้อหาหลักจะขยายเต็มที่ */
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* เพิ่มช่องว่าง */
+    margin-bottom: 20px;
+    background-color: var(--card-bg);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.mainTitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--font-color-dark);
+    margin: 0;
+}
+
+.icon {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.headerControls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+/* --- Footer --- */
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.875rem;
+    color: var(--font-color-dark);
+}
+
+
+/* =================================================================
+// 3. FILTER & INPUT STYLES
+// ================================================================= */
+
+.filterSection {
+    display: flex;
+    align-items: flex-end; /* จัดให้ input และ button แถวเดียวกันที่ด้านล่าง */
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    background-color: var(--card-bg);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.inputLabel {
+    font-size: 1rem;
+    color: var(--font-color-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.inputLabel i {
+    font-style: normal;
+    display: inline-block;
+    transform: rotate(0deg);
+}
+
+.dateInput {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--font-color-dark);
+    min-width: 150px;
+}
+
+.dateInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+
+/* =================================================================
+// 4. BUTTON STYLES
+// ================================================================= */
+
+/* Base button styles */
+.filterButton,
+.backButton,
+.fetchButton {
+    padding: 0.6rem 1.2rem;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+/* Back Button */
+.backButton {
+    background-color: var(--card-bg);
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow-light);
+}
+.backButton:hover {
+    background-color: #f0f4f8;
+}
+
+/* Filter Buttons (รายสัปดาห์, รายเดือน) */
+.filterButton {
+    background-color: var(--card-bg);
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow-light);
+}
+.filterButton:hover {
+    background-color: #f0f4f8;
+}
+
+/* Active state for filter button */
+.filterButtonActive {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Fetch & Export Buttons (เรียกดูข้อมูล, ส่งออกข้อมูล) */
+.fetchButton {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+}
+.fetchButton:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* Icon inside buttons */
+.fetchButton i,
+.backButton i {
+    margin-right: 8px;
+}
+
+
+/* =================================================================
+// 5. DATA VISUALIZATION & CONTAINERS
+// ================================================================= */
+
+/* --- Chart Container --- */
+.chartContainer {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-medium);
+    margin-bottom: 25px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Table Container --- */
+.tableContainer {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-medium);
+    overflow-x: auto;
+}
+
+.tableTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--font-color-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 1rem 0.8rem;
+    border-bottom: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.table th {
+    background-color: var(--bg-light-gray);
+    color: var(--font-color-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table td:nth-child(2) { /* Meter Name alignment */
+    text-align: left;
+    font-weight: 500;
+    color: var(--font-color-dark);
+}
+
+.table tbody tr {
+    transition: background-color 150ms ease;
+}
+
+.table .table-row.actionable:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.table .no-data-cell {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: var(--font-color-light);
+    font-style: italic;
+}
+
+
+/* =================================================================
+// 6. UTILITY, STATUS & STATE STYLES
+// ================================================================= */
+
+/* --- Loading and No Data States --- */
+.loadingState,
+.noDataState {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--font-color-light);
+    font-size: 1.1rem;
+}
+
+/* --- Clock --- */
+.clockContainer {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--font-color-light);
+    background-color: var(--bg-light-gray);
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+/* --- Status Dot --- */
+.statusDot {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+
+.statusDot.normal {
+    background-color: #22c55e; /* สีเขียว */
+}
+
+.statusDot.exceeded {
+    background-color: #ef4444; /* สีแดง */
+}
+
+.noData {
+    background-color: #ccc; 
+}

@@ -1,0 +1,77 @@
+/* ----------------------------------------------------- */
+/* Alarm Button Styles (Compact Version) */
+/* ----------------------------------------------------- */
+
+.alarmButton {
+    /* --- Key Layout & Sizing Changes --- */
+    display: inline-flex;      /* Use inline-flex for better alignment in a row */
+    flex-direction: row;       /* 1. จัดเรียงเนื้อหาแนวนอน (Title และ Count) */
+    align-items: center;       /* จัดให้เนื้อหาอยู่กึ่งกลางแนวตั้ง */
+    justify-content: center;
+    gap: 8px;                  /* 2. เพิ่มระยะห่างระหว่าง Title และ Count */
+    
+    height: 40px;              /* 3. ลดความสูงให้เท่ากับปุ่มอื่น (สำคัญที่สุด!) */
+    min-width: auto;           /* ปล่อยให้ความกว้างเป็นไปตามเนื้อหา */
+    padding: 0 16px;           /* ปรับ padding แนวนอนให้สวยงาม */
+
+    /* --- Existing Styles (keep these) --- */
+    border-radius: 0.5rem;     /* ทำให้ขอบมนเท่ากับปุ่มอื่น */
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* ลดเงาให้ดูเรียบขึ้น */
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.alarmButton:hover:not(:disabled) {
+    transform: translateY(-1px); /* ลดการเคลื่อนไหวลงเล็กน้อย */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alarmButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.alarmTitle {
+    font-size: 0.875rem;       /* 4. ปรับขนาดฟอนต์ให้พอดี */
+    color: #4b5563; 
+    margin-bottom: 0;          /* เอา margin-bottom ออกเพราะเป็นแนวนอนแล้ว */
+}
+
+.alarmCount {
+    font-size: 0.875rem;       /* 5. ลดขนาดตัวเลขลงให้เท่ากับ Title */
+    font-weight: 700;          /* ทำให้ตัวเลขยังคงดูเด่น */
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+/* --- Styles for different states --- */
+
+/* Active Alarm (มีแจ้งเตือน) */
+.alarmActive {
+    background-color: #fef2f2; /* Red-50 */
+    border-color: #fca5a5; /* Red-300 */
+}
+.alarmActive .alarmTitle {
+    color: #991b1b; /* Red-800 */
+}
+.alarmActive .alarmCount {
+    background-color: #ef4444; /* Red-500 */
+    color: white;
+}
+
+/* Normal State (ไม่มีแจ้งเตือน) */
+.alarmNormal {
+    background-color: #f3f4f6; /* Gray-100 */
+    border-color: #d1d5db; /* Gray-300 */
+}
+.alarmNormal .alarmTitle {
+    color: #374151; /* Gray-700 */
+}
+.alarmNormal .alarmCount {
+    background-color: #d1d5db; /* Gray-300 */
+    color: #1f2937; /* Gray-800 */
+}
